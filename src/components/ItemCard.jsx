@@ -15,7 +15,7 @@ const ItemCard = ({ svgIcon, color, backgroundColor, name, result }) => {
         <Text size="1rem" color="#0c073d" weight="700" style={{ marginRight: '5px' }}>
           {result}
         </Text>
-        <Text size="1rem" color="#777" weight="700">
+        <Text size="1rem" color="#888" weight="700">
           {' '}
           / 100
         </Text>

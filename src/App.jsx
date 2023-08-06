@@ -1,4 +1,7 @@
+import { Button } from './components/styles/DetailsCard/Button.styled';
+import { ButtonContainer } from './components/styles/DetailsCard/ButtonContainer.styled';
 import { Container } from './components/styles/Container.styled';
+import { CardContainer } from './components/styles/DetailsCard/CardsContainer.styled';
 import { DetailsCard } from './components/styles/DetailsCard/DetailsCard.styled';
 import ItemCard from './components/ItemCard';
 import { ResultBubble } from './components/styles/ResultCard/ResultBubble.styled';
@@ -37,10 +40,19 @@ const App = () => {
         </ResultCard>
         <DetailsCard>
           <h2>Summary</h2>
-          <ItemCard svgIcon={ReactionIcon} color="red" backgroundColor="#f3beb2" name="Reaction" result={80} />
-          <ItemCard svgIcon={MemoryIcon} color="yellow" backgroundColor="#f3beb2" name="Memory" result={92} />
-          <ItemCard svgIcon={VerbalIcon} color="green" backgroundColor="#f3beb2" name="Verbal" result={61} />
-          <ItemCard svgIcon={VisualIcon} color="blue" backgroundColor="#f3beb2" name="Visual" result={72} />
+          <CardContainer>
+            <ItemCard svgIcon={ReactionIcon} color="red" backgroundColor="#fdf0ec" name="Reaction" result={80} />
+            <ItemCard svgIcon={MemoryIcon} color="orange" backgroundColor="#fbf9d7" name="Memory" result={92} />
+            <ItemCard svgIcon={VerbalIcon} color="green" backgroundColor="#ecfdee" name="Verbal" result={61} />
+            <ItemCard svgIcon={VisualIcon} color="blue" backgroundColor="#d5e0fc" name="Visual" result={72} />
+            <ButtonContainer>
+              <Button>
+                <Text size="1.2rem" color="white" weight="700">
+                  Continue
+                </Text>
+              </Button>
+            </ButtonContainer>
+          </CardContainer>
         </DetailsCard>
       </Container>
     </>

@@ -1,9 +1,16 @@
 import { Container } from './components/styles/Container.styled';
-import { DetailsCard } from './components/styles/DetailsCard.styled';
-import { ResultBubble } from './components/styles/ResultBubble.styled';
-import { ResultCard } from './components/styles/ResultCard.styled';
-import { ResultDetails } from './components/styles/ResultDetails.styled';
+import { DetailsCard } from './components/styles/DetailsCard/DetailsCard.styled';
+import ItemCard from './components/ItemCard';
+import { ResultBubble } from './components/styles/ResultCard/ResultBubble.styled';
+import { ResultCard } from './components/styles/ResultCard/ResultCard.styled';
+import { ResultDetails } from './components/styles/ResultCard/ResultDetails.styled';
 import { Text } from './components/styles/Text.styled';
+
+// images
+import ReactionIcon from './assets/icon-reaction.svg';
+import MemoryIcon from './assets/icon-memory.svg';
+import VerbalIcon from './assets/icon-verbal.svg';
+import VisualIcon from './assets/icon-visual.svg';
 
 const App = () => {
   return (
@@ -30,6 +37,10 @@ const App = () => {
         </ResultCard>
         <DetailsCard>
           <h2>Summary</h2>
+          <ItemCard svgIcon={ReactionIcon} color="red" backgroundColor="#f3beb2" name="Reaction" result={80} />
+          <ItemCard svgIcon={MemoryIcon} color="yellow" backgroundColor="#f3beb2" name="Memory" result={92} />
+          <ItemCard svgIcon={VerbalIcon} color="green" backgroundColor="#f3beb2" name="Verbal" result={61} />
+          <ItemCard svgIcon={VisualIcon} color="blue" backgroundColor="#f3beb2" name="Visual" result={72} />
         </DetailsCard>
       </Container>
     </>
